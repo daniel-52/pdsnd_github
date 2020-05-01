@@ -24,18 +24,15 @@ def get_filters():
         city = input('Please enter the city you want to analyze: [C]hicago, [N]ew York City, or [W]ashington?\n')
         if city.lower() in ['c', 'chicago', '[c]hicago']:
             city = 'chicago'
-            print(city.title() + ' selected.\n')
-            break
         elif city.lower() in ['n', 'ny', 'nyc', 'new york', 'new york city', '[n]ew york city']:
             city = 'new york city'
-            print(city.title() + ' selected.\n')
-            break
         elif city.lower() in ['w', 'washington', '[w]ashington']:
             city = 'washington'
-            print(city.title() + ' selected.\n')
-            break
         else:
             print('\nInvalid input, please choose one of the listed cities.')
+            continue
+        print(city.title() + ' selected.\n')
+        break
 
     # get user input for month (all, january, february, ... , june)
     while True:
@@ -88,7 +85,7 @@ def load_data(city, month, day):
 
     # extract month and day of week from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
-    df['day_of_week'] = df['Start Time'].dt.weekday_name
+    df['day_of_week'] = df['Start Time'].dt.day_name()
 
     # filter by month if applicable
     if month != 'all':
