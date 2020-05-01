@@ -11,4 +11,4 @@ This project provides a tool for interactively analysing bike share data. The us
 Include the files used
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+This project is part of the Udacity Programming for Data Science with Python Nanodegree Program. The structure of the program in bikeshare.py and in this readme file were provided by Udacity. https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104
