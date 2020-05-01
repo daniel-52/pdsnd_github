@@ -155,21 +155,31 @@ def station_stats(df, month, day):
     start_time = time.time()
 
     # display most commonly used start station
+    # get the most common start station
     common_start_station = df['Start Station'].mode()[0]
+    # get the trip count for the most common start station
     common_start_station_count = df['Start Station'].value_counts().max()
+    # print statistic
     print('Most common start station: {}, count: {}, for month: {} and weekday: {}'
           .format(common_start_station, common_start_station_count, month.title(), day.title()))
 
     # display most commonly used end station
+    # get the most common end station
     common_end_station = df['End Station'].mode()[0]
+    # get the trip count for the most common end station
     common_end_station_count = df['End Station'].value_counts().max()
+    # print statistic
     print('Most common end station: {}, count: {}, for month: {} and weekday: {}'
           .format(common_end_station, common_end_station_count, month.title(), day.title()))
 
     # display most frequent combination of start station and end station trip
+    # Create new column with the trip start and end station combined
     df['Start End Station'] = df['Start Station'] + ' to ' + df['End Station']
+    # get the most common trip
     common_start_end_station = df['Start End Station'].mode()[0]
+    # get the trip count for the most common trip
     common_start_end_station_count = df['Start End Station'].value_counts().max()
+    # print statistic
     print('Most common trip: {}, count: {}, for month: {} and weekday: {}'
           .format(common_start_end_station, common_start_end_station_count, month.title(), day.title()))
 
