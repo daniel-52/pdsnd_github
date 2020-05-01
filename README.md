@@ -5,7 +5,7 @@ This project was started on 29 April 2020. This file was last updated on 01 May 
 Interactively analysing bike share data.
 
 ### Description
-Describe what your project is about and what it does
+This project provides a tool for interactively analysing bike share data. The user can select which city he wants to analyze and whether he wants to filter by month and / or day of the week. He will then get helpful statistics on the use of bike sharing, like average trip duration and most popular hour of the day.
 
 ### Files used
 Include the files used
